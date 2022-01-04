@@ -2,11 +2,24 @@ package com.alimi.kofia.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class IndexController {
-    @GetMapping("/")
+    //@GetMapping("/") // @RequestMapping(value="/", method=RequestMethod.GET) 과 같음
+    @RequestMapping(value="/", method= RequestMethod.GET)
     public String index() {
         return "index"; // -> src/main/resources/templates/index.mustache 로 전환되어 View Resolver 가 처리하게 됨
     }
 }
+
+// @GetMapping은 메소드에만 적용, @RequestMapping 은 클래스와 메소드에서 모두 사용 가능
+// @RequestMapping(value="/posts")
+// class asdasd {
+// @GetMapping
+// @PostMapping
+// @PutMapping
+// @DeleteMapping
+// }
+// 이런 식으로 사용 가능
