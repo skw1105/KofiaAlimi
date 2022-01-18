@@ -41,7 +41,7 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-mustache')
 
     // JSoup: 웹 크롤링 라이브러리
-    implementation('org.jsoup:jsoup') // 버전 명시하고 싶으면 :1.14.2 붙이면 됨.
+    implementation('org.jsoup:jsoup:1.14.3') // 버전 명시하고 싶으면 :1.14.2 붙이면 됨.
 }
 
 
